@@ -38,11 +38,9 @@ public class CMSPostMsgs implements Runnable {
     @Override
     public void run() {
 
-<<<<<<< HEAD
         log.info("Msgs to Send to Catalogue Management Subsystem  : " +cms_msg.size() + " BGP Identifer:  " +this.BGPIdentifier);
-=======
+
         //log.info("Msgs to Send to Catalogue Management Subsystem  : " +cms_msg.size());
->>>>>>> 410d9e2a763dea9b65f4a629d34c00ce89754123
 
         if(cms_msg.size()!=0)
         {
@@ -57,11 +55,11 @@ public class CMSPostMsgs implements Runnable {
                   Domainid= cms_msg.get(i).getDomainID();
                   if(cms_msg.get(i).getlearntfrom().equals(this.BGPIdentifier))
                         localDomain= true;
-<<<<<<< HEAD
+
                  //log.info("Learn from: "+cms_msg.get(i).getlearntfrom() +" BGP Identifier:  " +this.BGPIdentifier);
-=======
+
                  // log.info("Learn from: "+cms_msg.get(i).getlearntfrom() +" BGP Identifier:  " +this.BGPIdentifier);
->>>>>>> 410d9e2a763dea9b65f4a629d34c00ce89754123
+
                   //log.info("Entry point: "+cms_msg.get(i).getEntryPoint() +" Domain: " +cms_msg.get(i).getDomainID() +" Local Domain: " +localDomain);
                   create_post= new Create_CMS_Post(cms_msg.get(i).getEntryPoint(), Domainid, localDomain, this.BGPIdentifier);
                   cms_msg.get(i).setMsg_Flag(true); //Set the Flag to True

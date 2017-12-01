@@ -26,20 +26,16 @@ public class Create_CMS_Post {
         this.domain=domain;
         this.localDomain=localDomain;
         this.BGPIdentifer=BGPIdentifier;
-<<<<<<< HEAD
+
         //System.out.println("BGP Identifier for Https: " +this.BGPIdentifer);
 
 
+
         try {
+
             URL url = new URL("http://" +this.BGPIdentifer +"/mdc/domain/");
             //URL url = new URL("http://192.168.56.102/mdc/domain/");
-=======
 
-        try {
-
-            //URL url = new URL("http://" +this.BGPIdentifer +"/mdc/domain/");
-            URL url = new URL("http://192.168.56.102/mdc/domain/");
->>>>>>> 410d9e2a763dea9b65f4a629d34c00ce89754123
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
